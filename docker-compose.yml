@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  web:
+    build: ./images/php-apache
+    container_name: php_apache_prod5_wp_container
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.1.0
+    container_name: db_prod5_wp_container
+    environment:
+      MYSQL_ROOT_PASSWORD: 4321
+      MYSQL_DATABASE: phpdevelopers
+      MYSQL_USER: phpdevelopers
+      MYSQL_PASSWORD: 1234
+    volumes:
+      - db_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin_prod5_wp_container
+    ports:
+      - "8000:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: phpdevelopers
+      PMA_PASSWORD: 1234
+    depends_on:
+      - db
+
+volumes:
+  db_data:
