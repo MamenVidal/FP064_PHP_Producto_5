@@ -23,7 +23,7 @@
 /* stylelint-enable */
 
 /* Fondo gris claro para el footer */
-.site-footer {
+#site-footer {
     background-color: #f2f2f2; /* Puedes ajustar el color de fondo según tus preferencias */
 }
 
