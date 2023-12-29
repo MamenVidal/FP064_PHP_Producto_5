@@ -28,15 +28,14 @@
 }
 
 .footer__content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; /* Ajusta la dirección a column para apilar verticalmente */
-    max-width: 1000px; /* Ajusta el ancho máximo del contenido según sea necesario */
+    max-width: 800px; /* Ajusta el ancho máximo del contenido según sea necesario */
     margin: 0 auto; /* Centra el contenido horizontalmente */
 }
 
 .footer__content img {
+    display: block; /* Para eliminar espacio adicional debajo de la imagen */
     max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
     margin-bottom: 10px; /* Ajusta el espacio entre la imagen y el texto según sea necesario */
 }
+
