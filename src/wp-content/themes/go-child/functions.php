@@ -4,3 +4,6 @@
  *
  * @package Go
  */
+
+ // Agregar soporte para imágenes de encabezado
+
