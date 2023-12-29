@@ -50,38 +50,38 @@ $header_flex_class = in_array( get_theme_mod( 'header_variation', \Go\Core\get_d
             <?php Go\WooCommerce\woocommerce_cart_link(); ?>
         </div>
 
-        <div class="header__title-nav<?php echo esc_attr( $header_flex_class ); ?> items-center flex-nowrap">
+		<div class="header__title-nav<?php echo esc_attr( $header_flex_class ); ?> items-center flex-nowrap">
 
-            <?php
-            // Agregar la imagen personalizada al encabezado
-            $logo_image_url = get_stylesheet_directory_uri() . '/logo.jpg';
-            ?>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img src="<?php echo esc_url( $logo_image_url ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
-            </a>
+    <?php
+    // Agregar la imagen personalizada al encabezado
+    $logo_image_url = get_stylesheet_directory_uri() . '/logo.jpg';
+    ?>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+        <img src="<?php echo esc_url( $logo_image_url ); ?>" alt="<?php bloginfo( 'name' ); ?>" style="max-width: 150px; height: auto;" />
+    </a>
 
-            <?php Go\display_site_branding(); ?>
+    <?php Go\display_site_branding(); ?>
 
-            <?php if ( has_nav_menu( 'primary' ) ) : ?>
+    <?php if ( has_nav_menu( 'primary' ) ) : ?>
 
-                <nav id="header__navigation" class="header__navigation" aria-label="<?php esc_attr_e( 'Horizontal', 'go' ); ?>" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <nav id="header__navigation" class="header__navigation" aria-label="<?php esc_attr_e( 'Horizontal', 'go' ); ?>" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 
-                    <div class="header__navigation-inner">
-                        <?php
-                        wp_nav_menu(
-                            array(
-                                'menu_class'     => 'primary-menu list-reset',
-                                'theme_location' => 'primary',
-                            )
-                        );
-                        ?>
-                    </div>
+            <div class="header__navigation-inner">
+                <?php
+                wp_nav_menu(
+                    array(
+                        'menu_class'     => 'primary-menu list-reset',
+                        'theme_location' => 'primary',
+                    )
+                );
+                ?>
+            </div>
 
-                </nav>
+        </nav>
 
-            <?php endif; ?>
+    <?php endif; ?>
 
-        </div>
+</div>
 
         <?php Go\navigation_toggle(); ?>
 
