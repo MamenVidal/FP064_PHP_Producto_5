@@ -21,3 +21,12 @@
  * Copyright © 2023 GoDaddy Operating Company, LLC. All Rights Reserved.
  */
 /* stylelint-enable */
+
+.footer-center {
+    text-align: center;
+}
+
+.footer__content {
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    max-width: 800px; /* Ajusta el ancho máximo del contenido según sea necesario */
+}

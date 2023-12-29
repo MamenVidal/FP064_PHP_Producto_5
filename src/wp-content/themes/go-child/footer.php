@@ -14,9 +14,9 @@
 
         <?php
         // Agregar la imagen personalizada al footer
-        $footer_image_url = get_stylesheet_directory_uri() . '/footer-image.jpg';
+        $footer_image_url = get_stylesheet_directory_uri() . '/logo2.jpg';
         ?>
-        <img src="<?php echo esc_url( $footer_image_url ); ?>" alt="Footer Image" style="max-width: 100px; height: auto;" />
+        <img src="<?php echo esc_url( $footer_image_url ); ?>" alt="Footer Image" style="max-width: 80px; height: auto;" />
 		<p>&copy; <?php echo date( 'Y' ); ?> PHPDevelpers. Todos los derechos reservados.</p>
     </div>
 </footer>
