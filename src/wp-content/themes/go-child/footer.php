@@ -9,9 +9,7 @@
 </main>
 
 <footer id="site-footer" class="site-footer" role="contentinfo">
-    <div class="footer__content">
-        <!-- Agrega tu contenido del footer aquí -->
-
+    <div class="footer__content" style="text-align: center;">
         <?php
         // Agregar la imagen personalizada al footer
         $footer_image_url = get_stylesheet_directory_uri() . '/logo2.jpg';

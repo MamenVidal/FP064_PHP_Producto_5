@@ -24,7 +24,7 @@
 
 /* Centra el contenido del footer en la página */
 .site-footer {
-    text-align: center;
+    text-align:center;
 }
 
 .footer__content {
@@ -38,4 +38,3 @@
     margin: 0 auto; /* Centra la imagen horizontalmente */
     margin-bottom: 10px; /* Ajusta el espacio entre la imagen y el texto según sea necesario */
 }
-
