@@ -21,20 +21,12 @@
  * Copyright © 2023 GoDaddy Operating Company, LLC. All Rights Reserved.
  */
 /* stylelint-enable */
-
-/* Centra el contenido del footer en la página */
+/* Fondo gris claro para el footer */
 .site-footer {
-    text-align:center;
+    background-color: #f2f2f2; /* Puedes ajustar el color de fondo según tus preferencias */
 }
 
-.footer__content {
-    max-width: 800px; /* Ajusta el ancho máximo del contenido según sea necesario */
-    margin: 0 auto; /* Centra el contenido horizontalmente */
-}
-
-.footer__content img {
-    display: block; /* Para eliminar espacio adicional debajo de la imagen */
-    max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
-    margin-bottom: 10px; /* Ajusta el espacio entre la imagen y el texto según sea necesario */
+/* Fondo gris claro para el header */
+#site-header {
+    background-color: #f2f2f2; /* Puedes ajustar el color de fondo según tus preferencias */
 }
