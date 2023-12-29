@@ -4,16 +4,26 @@
  *
  * @package Go
  */
-
 ?>
 
-	</main>
+</main>
 
-	<?php Go\footer_variation(); ?>
+<footer id="site-footer" class="site-footer" role="contentinfo">
+    <div class="footer__content">
+        <!-- Agrega tu contenido del footer aquí -->
 
-	</div>
+        <?php
+        // Agregar la imagen personalizada al footer
+        $footer_image_url = get_stylesheet_directory_uri() . '/footer-image.jpg';
+        ?>
+        <img src="<?php echo esc_url( $footer_image_url ); ?>" alt="Footer Image" style="max-width: 100px; height: auto;" />
+		<p>&copy; <?php echo date( 'Y' ); ?> PHPDevelpers. Todos los derechos reservados.</p>
+    </div>
+</footer>
 
-	<?php wp_footer(); ?>
+</div>
 
-	</body>
+<?php wp_footer(); ?>
+
+</body>
 </html>

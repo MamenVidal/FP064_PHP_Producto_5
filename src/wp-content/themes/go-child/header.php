@@ -57,7 +57,7 @@ $header_flex_class = in_array( get_theme_mod( 'header_variation', \Go\Core\get_d
     $logo_image_url = get_stylesheet_directory_uri() . '/logo.jpg';
     ?>
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-        <img src="<?php echo esc_url( $logo_image_url ); ?>" alt="<?php bloginfo( 'name' ); ?>" style="max-width: 150px; height: auto;" />
+        <img src="<?php echo esc_url( $logo_image_url ); ?>" alt="<?php bloginfo( 'name' ); ?>" style="max-width: 130px; height: auto;" />
     </a>
 
     <?php Go\display_site_branding(); ?>
