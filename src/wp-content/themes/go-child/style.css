@@ -22,11 +22,11 @@
  */
 /* stylelint-enable */
 
-.footer-center {
+/* Centra el contenido del footer en la página */
+.site-footer {
     text-align: center;
 }
 
 .footer__content {
-    margin: 0 auto; /* Centra el contenido horizontalmente */
-    max-width: 800px; /* Ajusta el ancho máximo del contenido según sea necesario */
+    display: inline-block; /* Permite que el texto se centre correctamente */
 }
