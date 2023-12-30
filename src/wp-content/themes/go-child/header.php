@@ -42,45 +42,54 @@ $header_flex_class = in_array( get_theme_mod( 'header_variation', \Go\Core\get_d
 
 		<header id="site-header" class="site-header header relative <?php echo esc_attr( Go\has_header_background() ); ?> <?php echo esc_attr( get_theme_mod( 'header_variation' ) ); ?>" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
-			<div class="header__inner<?php echo esc_attr( $header_flex_class ); ?> items-center justify-between h-inherit w-full relative">
+    <div class="header__inner<?php echo esc_attr( $header_flex_class ); ?> items-center justify-between h-inherit w-full relative">
 
-				<div class="header__extras">
-					<?php do_action( 'go_header_social_icons' ); ?>
-					<?php Go\search_toggle(); ?>
-					<?php Go\WooCommerce\woocommerce_cart_link(); ?>
-				</div>
+        <div class="header__extras">
+            <?php do_action( 'go_header_social_icons' ); ?>
+            <?php Go\search_toggle(); ?>
+            <?php Go\WooCommerce\woocommerce_cart_link(); ?>
+        </div>
 
-				<div class="header__title-nav<?php echo esc_attr( $header_flex_class ); ?> items-center flex-nowrap">
+		<div class="header__title-nav<?php echo esc_attr( $header_flex_class ); ?> items-center flex-nowrap">
 
-					<?php Go\display_site_branding(); ?>
+    <?php
+    // Agregar la imagen personalizada al encabezado
+    $logo_image_url = get_stylesheet_directory_uri() . '/logo.jpg';
+    ?>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+        <img src="<?php echo esc_url( $logo_image_url ); ?>" alt="<?php bloginfo( 'name' ); ?>" style="max-width: 100px; height: auto;" />
+    </a>
 
-					<?php if ( has_nav_menu( 'primary' ) ) : ?>
+    <?php Go\display_site_branding(); ?>
 
-						<nav id="header__navigation" class="header__navigation" aria-label="<?php esc_attr_e( 'Horizontal', 'go' ); ?>" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <?php if ( has_nav_menu( 'primary' ) ) : ?>
 
-							<div class="header__navigation-inner">
-								<?php
-								wp_nav_menu(
-									array(
-										'menu_class'     => 'primary-menu list-reset',
-										'theme_location' => 'primary',
-									)
-								);
-								?>
-							</div>
+        <nav id="header__navigation" class="header__navigation" aria-label="<?php esc_attr_e( 'Horizontal', 'go' ); ?>" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 
-						</nav>
+            <div class="header__navigation-inner">
+                <?php
+                wp_nav_menu(
+                    array(
+                        'menu_class'     => 'primary-menu list-reset',
+                        'theme_location' => 'primary',
+                    )
+                );
+                ?>
+            </div>
 
-					<?php endif; ?>
+        </nav>
 
-				</div>
+    <?php endif; ?>
 
-				<?php Go\navigation_toggle(); ?>
+</div>
 
-			</div>
+        <?php Go\navigation_toggle(); ?>
 
-			<?php get_template_part( 'partials/modal-search' ); ?>
+    </div>
 
-		</header>
+    <?php get_template_part( 'partials/modal-search' ); ?>
+
+</header>
+
 
 		<main id="site-content" class="site-content" role="main">
