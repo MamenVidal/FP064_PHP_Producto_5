@@ -31,3 +31,10 @@
 #site-header {
     background-color: #f2f2f2; /* Puedes ajustar el color de fondo según tus preferencias */
 }
+
+.post__title {
+    font-size: 50px; /* Cambia el tamaño del título a 28 pixels */
+    text-align: center; /* Centra el texto */
+    margin: 0; /* Elimina el margen superior e inferior */
+    /* Otros estilos que desees aplicar */
+}
